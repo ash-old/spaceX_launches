@@ -1,25 +1,35 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component} from 'react';
+import LaunchDetail from '../Components/LaunchDetail';
 
-const apiUrl = 'https://api.spacexdata.com/v3/launches';
 
-function LaunchesContainer() {
 
-    const [launch, setLaunches] = useState([]);
+class LaunchesContainer extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            launches: []
+        };
+    }
+    
 
-    useEffect(() => {
+    componentDidMount() {
+
+        const apiUrl = 'https://api.spacexdata.com/v3/launches';
+
         fetch(apiUrl)
         .then(res => res.json())
-        .then(data => {
-            setLaunches(data[0].mission_name)
-        })
+        .then(launches => this.setState({launches: launches}))
         .catch(err => console.error);
-    }, [])
+    }
 
-    return (
-        <div>
-           {launch} 
-        </div>
-    )
+    render() {
+        
+        return(
+            <div>
+                <LaunchDetail />
+            </div>
+        )
+    }
 
 
 
