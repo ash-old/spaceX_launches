@@ -26,7 +26,7 @@ class LaunchesContainer extends Component {
         
         return(
             <div>
-                <LaunchDetail />
+                <LaunchDetail launches={this.state.launches}/>
             </div>
         )
     }
