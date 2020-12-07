@@ -1,9 +1,10 @@
 import './App.css';
+import LaunchesContainer from './Containers/LaunchesContainer';
 
 function App() {
   return (
     <div className="App">
-      Hello!
+      <LaunchesContainer />
     </div>
   );
 }
