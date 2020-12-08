@@ -1,11 +1,12 @@
 import React from 'react';
 import launch from '../assets/img/launch-home.png';
+import './RocketImage.css';
 
 function RocketImage() {
 
     return (
-        <div>
-            <img src={launch} alt="space x rocket" height={200} width={300} />
+        <div className="rocket">
+            <img src={launch} alt="space x rocket" height={550} width={450} />
         </div>
     )
 

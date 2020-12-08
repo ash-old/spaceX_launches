@@ -9,8 +9,12 @@ const LaunchDetail = (props) => {
 
     return(
         <div>
-            <RocketImage />
-            {detail}
+            <div className="rocket">
+                <RocketImage />
+            </div>
+            <div className="launch">
+                {detail}
+            </div>
         </div>
     )
 }
