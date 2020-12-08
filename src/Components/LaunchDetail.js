@@ -1,5 +1,6 @@
 import React from 'react';
 import RocketImage from './RocketImage';
+import './LaunchDetail.css';
 
 const LaunchDetail = (props) => {
 
@@ -9,7 +10,7 @@ const LaunchDetail = (props) => {
 
     return(
         <div>
-            <div className="rocket">
+            <div>
                 <RocketImage />
             </div>
             <div className="launch">
