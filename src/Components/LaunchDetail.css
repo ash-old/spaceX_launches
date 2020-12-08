@@ -1,6 +1,18 @@
 
-.launch {
+.launch-card {
+display:flex;
+flex-direction: column;
+/* justify-content: space-around; */
+margin: 10px;
 padding-right:30px;
-padding-top: 150px;;
 text-align: right;   
+border: 1px solid grey;
+margin-left: auto;
+margin-right: 40px;
+width: 600px;
+box-shadow: 10px 5px 5px dark grey;
+}
+
+.launch {
+    padding-top: 100px;
 }
