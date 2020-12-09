@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import LaunchDetail from '../Components/LaunchDetail';
 
 
@@ -37,7 +38,10 @@ class LaunchesContainer extends Component {
 
 
 
-
 }
+
+LaunchesContainer.propTypes = {
+    launches: PropTypes.string.isRequired
+};
 
 export default LaunchesContainer;
