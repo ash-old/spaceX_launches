@@ -7,7 +7,11 @@ class LaunchesContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            launches: []
+            launches: [],
+                flightNumber: "",
+                missionName: "",
+                rocketName: "",
+                date: ""
         };
     }
     
