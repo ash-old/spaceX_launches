@@ -12,7 +12,7 @@ class LaunchesContainer extends Component {
                 flightNumber: "",
                 missionName: "",
                 rocketName: "",
-                date: ""
+                date: new Date()
         };
     }
     

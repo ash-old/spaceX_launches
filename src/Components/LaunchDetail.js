@@ -8,10 +8,11 @@ const LaunchDetail = (props) => {
     const detail = props.launches.map(launch => {
         return (
             <div className="launch-card">
-                <p>{launch.flight_number}</p>
-                <h2 key={launch.flight_number}>{launch.mission_name}</h2>
-                <p>{launch.rocket.rocket_name}</p>
-                <p>{launch.launch_date_utc}</p>
+                <div className="flight-number" key={launch.flight_number}>
+                    #{launch.flight_number}</div>
+                    <div className="mission-name"><strong>{launch.mission_name}</strong></div>
+                    {launch.rocket.rocket_name}
+                    {launch.launch_date_utc}
             </div>
         )
     })

@@ -1,18 +1,35 @@
 
 .launch-card {
 display:flex;
-flex-direction: column;
-/* justify-content: space-around; */
+/* flex-direction: column; */
+justify-content: space-between;
 margin: 10px;
 padding-right:30px;
+padding:15px;
 text-align: right;   
 border: 1px solid grey;
+border-radius:5px;
 margin-left: auto;
 margin-right: 40px;
-width: 600px;
+width: 500px;
+
 box-shadow: 10px 5px 5px dark grey;
 }
 
 .launch {
     padding-top: 60px;
 }
+
+.flight-number {
+    display: inline-flex;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+}
+
+.mission-name {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
