@@ -1,0 +1,8 @@
+.sort {
+    display: flex;
+    padding-left: 800px;;
+    border: 1px solid blue;
+    background-color: blue;
+    height: 100px;
+    width: 50px;
+}

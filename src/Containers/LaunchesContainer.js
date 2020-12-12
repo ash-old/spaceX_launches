@@ -9,10 +9,10 @@ class LaunchesContainer extends Component {
         super(props);
         this.state = {
             launches: [],
-                flightNumber: "",
-                missionName: "",
-                rocketName: "",
-                date: new Date()
+                // flightNumber: "",
+                // missionName: "",
+                // rocketName: "",
+                // date: new Date()
         };
     }
     
@@ -27,12 +27,21 @@ class LaunchesContainer extends Component {
         .catch(err => console.error);
     }
 
+    handleSortSubmit(launches) {
+        this.setState({launches: launches.reverse()  
+        })
+    }
+
     render() {
         
         return(
+            this.state.launches.length > 0 ?(
             <div>
-                <LaunchDetail launches={this.state.launches}/>
+                <LaunchDetail launches={this.state.launches} sort={this.handleSortSubmit}/>
             </div>
+            ) : (
+                <h2 className="loading">loading...</h2>
+            )
         )
     }
 
@@ -41,7 +50,8 @@ class LaunchesContainer extends Component {
 }
 
 LaunchesContainer.propTypes = {
-    launches: PropTypes.string.isRequired
+    launches: PropTypes.string.isRequired,
+    sort: PropTypes.string.isRequired
 };
 
 export default LaunchesContainer;
