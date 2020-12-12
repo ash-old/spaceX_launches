@@ -10,12 +10,13 @@ class LaunchesContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            launches: [],
+            launches: []
                 // flightNumber: "",
                 // missionName: "",
                 // rocketName: "",
                 // date: new Date()
         };
+        this.handleSortSubmit = this.handleSortSubmit.bind(this);
     }
     
 
@@ -29,18 +30,28 @@ class LaunchesContainer extends Component {
         .catch(err => console.error);
     }
 
-    handleSortSubmit(launches) {
-        this.setState({launches: launches.sort()  
+    handleSortSubmit() {
+        const reverseData = this.state.launches.reverse().map((launches, i) => {
+            return (
+                <li>
+                    {launches}
+                </li>
+            )
         })
+        this.setState({
+            launches: reverseData
+        })
+        console.log("winning", reverseData)
     }
+
 
     render() {
         
         return(
             this.state.launches.length > 0 ?(
             <div>
-                <span className="launch-detail">
-                <SortLaunchDetail sort={this.handleSortSubmit}/>
+                <span className="sort-detail">
+                <SortLaunchDetail sortData={this.handleSortSubmit}/>
                 </span>
                 <LaunchDetail launches={this.state.launches}/>
             </div>
@@ -55,8 +66,8 @@ class LaunchesContainer extends Component {
 }
 
 LaunchesContainer.propTypes = {
-    launches: PropTypes.string.isRequired,
-    sort: PropTypes.string.isRequired
+    launches: PropTypes.string,
+    sortData: PropTypes.string
 };
 
 export default LaunchesContainer;
