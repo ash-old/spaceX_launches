@@ -1,8 +1,16 @@
-.sort {
+.sort-button {
     display: flex;
-    padding-left: 800px;;
-    border: 1px solid blue;
-    background-color: blue;
-    height: 100px;
-    width: 50px;
+    
+    width:150px;
+    height:30px;
+    /* padding:5px; */
+    background-color: #215184;
+    align-items: center;
+
+}
+
+.button-text {
+    display:inline-flex;
+    color:white;
+    padding: 5px;
 }

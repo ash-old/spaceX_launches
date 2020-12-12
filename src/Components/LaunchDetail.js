@@ -2,7 +2,7 @@ import React from 'react';
 import RocketImage from './RocketImage';
 import './LaunchDetail.css';
 import SpaceXLogo from './SpaceXLogo';
-import SortLaunchDetail from './SortLaunchDetail'
+
 
 const LaunchDetail = (props) => {
 
@@ -15,8 +15,9 @@ const LaunchDetail = (props) => {
                         <strong>{launch.mission_name}</strong>
                     </div>
                     <div className="rocket-name">
-                        <span >{launch.rocket.rocket_name}</span>
                         <span >{launch.launch_date_utc}</span>
+                        <br/>
+                        <span >{launch.rocket.rocket_name}</span>
                     </div>
                     
             </div>
@@ -28,9 +29,6 @@ const LaunchDetail = (props) => {
         <div>
             <div>
                 <SpaceXLogo />
-            </div>
-            <div>
-                <SortLaunchDetail sort={props.handleSortSubmit}/>
             </div>
             <div>
                 <RocketImage />

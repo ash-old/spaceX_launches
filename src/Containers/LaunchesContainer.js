@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import LaunchDetail from '../Components/LaunchDetail';
+import SortLaunchDetail from '../Components/SortLaunchDetail';
+import './LaunchesContainer.css';
 
 
 
@@ -28,7 +30,7 @@ class LaunchesContainer extends Component {
     }
 
     handleSortSubmit(launches) {
-        this.setState({launches: launches.reverse()  
+        this.setState({launches: launches.sort()  
         })
     }
 
@@ -37,7 +39,10 @@ class LaunchesContainer extends Component {
         return(
             this.state.launches.length > 0 ?(
             <div>
-                <LaunchDetail launches={this.state.launches} sort={this.handleSortSubmit}/>
+                <span className="launch-detail">
+                <SortLaunchDetail sort={this.handleSortSubmit}/>
+                </span>
+                <LaunchDetail launches={this.state.launches}/>
             </div>
             ) : (
                 <h2 className="loading">loading...</h2>
