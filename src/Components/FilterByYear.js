@@ -7,8 +7,6 @@ import './FilterByYear.css';
 
 function FilterByYear(props) {
 
-    
-
     return (
         <select id="date-selection" onChange={props.filterYear()} className="filter-select">
             <option diabled value ="default" className="select-text">
@@ -20,7 +18,6 @@ function FilterByYear(props) {
             <option>
                 <li>{props.launch_date_utc}</li>
             </option>
-            
         </select>
     )
 

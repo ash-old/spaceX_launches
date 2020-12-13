@@ -25,7 +25,6 @@ font-style: normal;
 .flight-number {
     display: inline-flex;
     align-items: flex-start;
-    /* justify-content: space-around; */
 }
 
 .mission-name {
