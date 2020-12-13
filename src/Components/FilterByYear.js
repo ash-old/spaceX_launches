@@ -2,13 +2,13 @@ import React from 'react';
 import selectSmall from '../assets/icon/select.png';
 import selectMedium from '../assets/icon/select@2x.png';
 import selectLarge from '../assets/icon/select@3x.png';
-import './selectData.css';
+import './FilterByYear.css';
 
 
 function FilterByYear(props) {
 
     return (
-        <button onClick={() => props.selectData()} className="select-button">
+        <button onClick={() => props.filterData()} className="filter-button">
             <span className="button-text">Filter by Year</span>
             <img src={selectSmall} 
                  srcSet={`${selectSmall} 1200w, ${selectMedium} 800w, ${selectLarge} 600w`}

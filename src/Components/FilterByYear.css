@@ -1,0 +1,14 @@
+.filter-button {
+    display: flex;
+    align-items: flex-end;
+    width:150px;
+    height:30px;
+    background-color: #215184;
+    align-items: center;
+}
+
+.button-text {
+    display:inline-flex;
+    color:white;
+    padding: 5px;
+}
