@@ -2,6 +2,7 @@ import React from 'react';
 import reloadSmall from '../assets/icon/refresh.png';
 import reloadMedium from '../assets/icon/refresh@2x.png';
 import reloadLarge from '../assets/icon/refresh@3x.png';
+import './ReloadData.css';
 
 
 function ReloadData(props) {
