@@ -7,8 +7,6 @@ import './SortLaunchDetail.css';
 
 function SortLaunchDetail(props) {
 
-    
-
     return (
         <button onClick={() => props.sortData()} className="sort-button">
             <span className="button-text">{props.toggle ? 'Sort Descending' : 'Sort Ascending'}</span>

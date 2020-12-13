@@ -14,3 +14,12 @@
     margin-right: 40px;
     align-items: flex-end;
 }
+
+.reload-data {
+    display: flex;
+    position: relative;
+    top: 10px;
+    justify-content: flex-end;
+    margin-right: 0px;
+    align-items: flex-end;
+}
