@@ -1,4 +1,16 @@
 .loading {
     margin: auto;
     text-align: center;
+    padding-top: 400px;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.sort-detail {
+    display: flex;
+    position: relative;
+    top: 140px;
+    justify-content: flex-end;
+    margin-right: 40px;
+    align-items: flex-end;
 }
