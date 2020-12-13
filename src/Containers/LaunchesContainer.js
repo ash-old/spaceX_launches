@@ -31,17 +31,18 @@ class LaunchesContainer extends Component {
     }
 
     handleSortSubmit() {
-        const reverseData = this.state.launches.reverse().map((launches, i) => {
-            return (
-                <li>
-                    {launches}
-                </li>
-            )
-        })
+        const reverseData = this.state.launches.reverse();
+        // const reverseData = this.state.launches.reverse().map((launches, i) => {
+        //     return (
+        //         <li>
+        //         {launches}
+        //         </li>
+        //     )
+        // })
         this.setState({
             launches: reverseData
         })
-        console.log("winning", reverseData)
+        console.log("result", reverseData)
     }
 
 
