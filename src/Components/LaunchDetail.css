@@ -15,6 +15,7 @@ margin-right: 40px;
 width: 600px;
 box-shadow: 10px 5px 5px dark grey;
 position: relative;
+font-style: normal;
 }
 
 .launch {
@@ -30,10 +31,12 @@ position: relative;
 .mission-name {
     display: inline-flex;
     align-items: center;
+    font-weight: 900;
 }
 
 .rocket-name {
     display: block;
+    font-weight: bold;
 }
 
 

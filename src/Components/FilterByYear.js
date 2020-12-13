@@ -17,7 +17,9 @@ function FilterByYear(props) {
                  srcSet={`${selectSmall} 1200w, ${selectMedium} 800w, ${selectLarge} 600w`}
                  alt="reload-data" /> */}
             </option>
-            <option>{props.launch_date_utc}</option>
+            <option>
+                <li>{props.launch_date_utc}</li>
+            </option>
             
         </select>
     )

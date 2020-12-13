@@ -12,12 +12,12 @@ const LaunchDetail = (props) => {
                 <span className="flight-number" key={launch.flight_number}>
                     #{launch.flight_number}</span>
                     <span className="mission-name">
-                        <strong>{launch.mission_name}</strong>
+                        {launch.mission_name}
                     </span>
-                    <span className="rocket-name">
+                    <span >
                         <span >{new Date(launch.launch_date_utc).toDateString()}</span>
                         <br/>
-                        <span >{launch.rocket.rocket_name}</span>
+                        <span className="rocket-name">{launch.rocket.rocket_name}</span>
                     </span>
                     
             </div>

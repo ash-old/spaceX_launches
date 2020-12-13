@@ -17,6 +17,7 @@ class LaunchesContainer extends Component {
         };
         this.handleSortSubmit = this.handleSortSubmit.bind(this);
         this.handleRefreshSubmit = this.handleRefreshSubmit.bind(this);
+        this.filterByYear = this.filterByYear.bind(this);
         
     }
     
@@ -45,8 +46,11 @@ class LaunchesContainer extends Component {
     }
 
     filterByYear() {
-        //something
-        console.log("change")
+        const filteredData = this.state.launches.filter(launch => launch.launch_date_utc);
+
+        // this.setState({
+        //     launches: filteredData
+        // })
     }
 
     handleRefreshSubmit() {
@@ -60,7 +64,7 @@ class LaunchesContainer extends Component {
             this.state.launches.length > 0 ?(
             <div>
                 <span className="filter-data">
-                    <FilterByYear filterYear={this.filterByYear} launchdate={this.state.launch_date_utc}/>
+                    <FilterByYear filterYear={this.filterByYear} launchdate={this.state.launches}/>
                 </span>
                 <span className="reload-data">
                     <ReloadData refreshData={this.handleRefreshSubmit}/>
