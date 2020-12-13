@@ -14,11 +14,11 @@ const LaunchDetail = (props) => {
                     <span className="mission-name">
                         <strong>{launch.mission_name}</strong>
                     </span>
-                    <div className="rocket-name">
+                    <span className="rocket-name">
                         <span >{new Date(launch.launch_date_utc).toDateString()}</span>
                         <br/>
                         <span >{launch.rocket.rocket_name}</span>
-                    </div>
+                    </span>
                     
             </div>
         )
@@ -34,9 +34,9 @@ const LaunchDetail = (props) => {
             <div>
                 <RocketImage />
             </div>
-            <ul className="launch">
-                {detail}
-            </ul>
+                <ul className="launch">
+                    {detail}
+                </ul>
         </div>
     )
 }

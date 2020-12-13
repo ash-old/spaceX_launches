@@ -2,6 +2,7 @@
 .launch-card {
 display:flex;
 color: #545454;
+background-color: white;
 justify-content: space-between;
 margin: 10px;
 padding-right:30px;
@@ -13,6 +14,7 @@ margin-left: auto;
 margin-right: 40px;
 width: 600px;
 box-shadow: 10px 5px 5px dark grey;
+position: relative;
 }
 
 .launch {

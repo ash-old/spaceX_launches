@@ -7,13 +7,19 @@ import './FilterByYear.css';
 
 function FilterByYear(props) {
 
+    
+
     return (
-        <button onClick={() => props.filterData()} className="filter-button">
-            <span className="button-text">Filter by Year</span>
-            <img src={selectSmall} 
+        <select id="date-selection" onChange={props.filterYear()} className="filter-select">
+            <option diabled value ="default" className="select-text">
+                Filter By Year
+                {/* <img src={selectSmall} 
                  srcSet={`${selectSmall} 1200w, ${selectMedium} 800w, ${selectLarge} 600w`}
-                 alt="reload-data" />
-        </button>
+                 alt="reload-data" /> */}
+            </option>
+            <option>{props.launch_date_utc}</option>
+            
+        </select>
     )
 
 }

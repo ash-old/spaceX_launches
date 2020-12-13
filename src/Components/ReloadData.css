@@ -1,8 +1,8 @@
 .reload-button {
     display: flex;
-    border-radius: 10px 0px 0px 10px;
-    -webkit-border-radius: 10px 0px 0px 10px;
-    -moz-border-radius: 10px 0px 0px 10px;
+    border-radius: 13px 0px 0px 13px;
+    -webkit-border-radius: 13px 0px 0px 13px;
+    -moz-border-radius: 13px 0px 0px 13px;
     align-items: flex-end;
     width:150px;
     height:30px;

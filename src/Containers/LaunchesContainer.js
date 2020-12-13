@@ -46,11 +46,11 @@ class LaunchesContainer extends Component {
 
     filterByYear() {
         //something
+        console.log("change")
     }
 
     handleRefreshSubmit() {
         this.apiFetch();
-        // console.log(this.state.launches)
     }
 
 
@@ -60,13 +60,13 @@ class LaunchesContainer extends Component {
             this.state.launches.length > 0 ?(
             <div>
                 <span className="filter-data">
-                    <FilterByYear filterData={this.filterByYear}/>
+                    <FilterByYear filterYear={this.filterByYear} launchdate={this.state.launch_date_utc}/>
                 </span>
                 <span className="reload-data">
                     <ReloadData refreshData={this.handleRefreshSubmit}/>
                 </span>
                 <span className="sort-detail">
-                    <SortLaunchDetail sortData={this.handleSortSubmit} toggle={this.state.isToggleOn}/>
+                    <SortLaunchDetail sortData={this.handleSortSubmit} toggle={this.state.isToggleOn} refreshData={this.handleRefreshSubmit}/>
                 </span>
                 <LaunchDetail launches={this.state.launches}/>
             </div>
@@ -81,8 +81,11 @@ class LaunchesContainer extends Component {
 }
 
 LaunchesContainer.propTypes = {
-    launches: PropTypes.string,
-    sortData: PropTypes.string
+    filterYear: PropTypes.string.isRequired,
+    refreshData: PropTypes.string.isRequired,
+    toggle: PropTypes.string.isRequired,
+    launches: PropTypes.string.isRequired,
+    sortData: PropTypes.string.isRequired
 };
 
 export default LaunchesContainer;
