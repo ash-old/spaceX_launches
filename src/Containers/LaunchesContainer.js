@@ -10,11 +10,8 @@ class LaunchesContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            launches: []
-                // flightNumber: "",
-                // missionName: "",
-                // rocketName: "",
-                // date: new Date()
+            launches: [],
+            isToggleOn: true
         };
         this.handleSortSubmit = this.handleSortSubmit.bind(this);
     }
@@ -31,18 +28,14 @@ class LaunchesContainer extends Component {
     }
 
     handleSortSubmit() {
-        const reverseData = this.state.launches.reverse();
-        // const reverseData = this.state.launches.reverse().map((launches, i) => {
-        //     return (
-        //         <li>
-        //         {launches}
-        //         </li>
-        //     )
-        // })
+        const reverseData = this.state.launches.sort((a,b) => new Date(b.launch_date_utc) - new Date(a.launch_date_utc));
+        
+        
         this.setState({
+            isToggleOn: !this.state.isToggleOn,
             launches: reverseData
         })
-        console.log("result", reverseData)
+        
     }
 
 
@@ -52,7 +45,7 @@ class LaunchesContainer extends Component {
             this.state.launches.length > 0 ?(
             <div>
                 <span className="sort-detail">
-                <SortLaunchDetail sortData={this.handleSortSubmit}/>
+                <SortLaunchDetail sortData={this.handleSortSubmit} toggle={this.state.isToggleOn}/>
                 </span>
                 <LaunchDetail launches={this.state.launches}/>
             </div>

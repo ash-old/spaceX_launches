@@ -11,7 +11,7 @@ function SortLaunchDetail(props) {
 
     return (
         <button onClick={() => props.sortData()} className="sort-button">
-            <span className="button-text">Sort Decending</span>
+            <span className="button-text">{props.toggle ? 'Sort Descending' : 'Sort Ascending'}</span>
             <img src={sortSmall} 
                  srcSet={`${sortSmall} 1200w, ${sortMedium} 800w, ${sortLarge} 600w`}
                  alt="sort-data" />
