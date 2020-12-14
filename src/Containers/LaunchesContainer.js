@@ -35,8 +35,9 @@ class LaunchesContainer extends Component {
     }
 
     handleSortSubmit() {
-        const reverseData = this.state.launches.sort((a,b) => {
-           return new Date(b.launch_date_utc) - new Date(a.launch_date_utc)});
+        const reverseData = this.state.launches.reverse();
+        // const reverseData = this.state.launches.sort((a,b) => {
+        //    return new Date(b.launch_date_utc) - new Date(a.launch_date_utc)});
         
         this.setState({
             isToggleOn: !this.state.isToggleOn,
@@ -46,10 +47,13 @@ class LaunchesContainer extends Component {
     }
 
     filterByYear() {
-        const filteredData = this.state.launches.filter(launch => launch.launch_date_utc);
+        const filteredData = this.state.launches.filter(launch => {
+            let launchDate = launch.launch_date_utc
+            return launchDate
+        });
 
         // this.setState({
-        //     launches: filteredData
+        //     filteredData
         // })
     }
 
