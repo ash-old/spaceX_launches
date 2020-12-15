@@ -7,24 +7,23 @@ import './FilterByYear.css';
 
 function FilterByYear(props) {
 
-    const selectOptions = props.launchData.map(year => {
-        return <option 
-                value={year.launch_year} 
-                key={year.flight_number}>
-                {year.launch_year}
-               </option>
+    const selectOptions = props.launchData.map(launch => {
+        return <option
+            value={launch.launch_year}
+            key={launch.flight_number}>
+            {launch.launch_year}
+        </option>
     })
-console.log('result', selectOptions)
+    console.log('result', selectOptions)
     return (
         <select id="date-selection" onChange={value => props.filterYear(value)} className="filter-select">
-            <option disabled value="default" className="select-text">
+            <option value="" className="select-text">
                 Filter By Year
                 {/* <img src={selectSmall} 
                  srcSet={`${selectSmall} 1200w, ${selectMedium} 800w, ${selectLarge} 600w`}
                  alt="reload-data" /> */}
             </option>
-                {selectOptions}
-            
+            {selectOptions}
         </select>
     )
 
