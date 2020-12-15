@@ -14,9 +14,14 @@ function FilterByYear(props) {
             {launch.launch_year}
         </option>
     })
-    console.log('result', selectOptions)
+    // onChange={value => props.filterByYear(value)}
+
+    function handleChange(event) {
+        props.filterByYear(event.target.value);
+    }
+
     return (
-        <select id="date-selection" onChange={value => props.filterYear(value)} className="filter-select">
+        <select id="date-selection" onChange={handleChange} className="filter-select">
             <option value="" className="select-text">
                 Filter By Year
                 {/* <img src={selectSmall} 

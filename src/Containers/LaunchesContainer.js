@@ -45,11 +45,12 @@ class LaunchesContainer extends Component {
     }
 
     filterByYear(value) {
-        // const NoDupYear = [ ...new Set(value) ]
+        const NoDupYear = [ ...new Set(value) ]
 
         // this.setState({
-        //     launches: NoDupYear
+        //     launches: value
         // })
+        console.log(NoDupYear)
     }
 
     handleRefreshSubmit() {
@@ -62,7 +63,7 @@ class LaunchesContainer extends Component {
         return (
             this.state.launches.length > 0 ? (
                 <div>
-                    <FilterByYear className="filter-data" filterYear={this.filterByYear} launchData={this.state.launches} />
+                    <FilterByYear className="filter-data" filterByYear={this.filterByYear} launchData={this.state.launches} />
                     <span className="reload-data">
                         <ReloadData refreshData={this.handleRefreshSubmit} />
                     </span>
@@ -82,11 +83,12 @@ class LaunchesContainer extends Component {
 }
 
 LaunchesContainer.propTypes = {
-    filterYear: PropTypes.string.isRequired,
+    filterByYear: PropTypes.string.isRequired,
     refreshData: PropTypes.string.isRequired,
     toggle: PropTypes.string.isRequired,
     launches: PropTypes.string.isRequired,
-    sortData: PropTypes.string.isRequired
+    sortData: PropTypes.string.isRequired,
+    launchData: PropTypes.string.isRequired
 };
 
 export default LaunchesContainer;
