@@ -66,7 +66,7 @@ class LaunchesContainer extends Component {
             this.state.launches.length > 0 ?(
             <div>
                 <span className="filter-data">
-                    <FilterByYear filterYear={this.filterByYear} launchdate={this.state.launches}/>
+                    <FilterByYear filterYear={this.filterByYear} launchDate={this.state.launches}/>
                 </span>
                 <span className="reload-data">
                     <ReloadData refreshData={this.handleRefreshSubmit}/>

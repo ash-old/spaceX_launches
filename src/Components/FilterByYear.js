@@ -7,6 +7,10 @@ import './FilterByYear.css';
 
 function FilterByYear(props) {
 
+    const filterDate = props.launchDate.map(year => {
+        return <option value={year.launch_year} key={year.launch_year}>{year.launch_year}</option>
+    })
+
     return (
         <select id="date-selection" onChange={props.filterYear()} className="filter-select">
             <option diabled value ="default" className="select-text">
@@ -16,7 +20,7 @@ function FilterByYear(props) {
                  alt="reload-data" /> */}
             </option>
             <option>
-                <li>{props.launch_date_utc}</li>
+                <li>{filterDate}</li>
             </option>
         </select>
     )
