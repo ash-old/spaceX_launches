@@ -44,14 +44,11 @@ class LaunchesContainer extends Component {
         
     }
 
-    filterByYear() {
-        const filteredData = this.state.launches.filter(launch => {
-            let launchDate = launch.launch_date_utc
-            return launchDate
-        });
+    filterByYear(value) {
+        // const NoDupYear = [ ...new Set(value) ]
 
         // this.setState({
-        //     filteredData
+        //     launches: NoDupYear
         // })
     }
 
